@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="font-sans bg-gray-100 pt-10">
+    <div class="container mx-auto bg-white p-6 rounded shadow-lg">
+      <h1 class="text-2xl font-bold mb-4">Shopping Cart</h1>
+
+      <div id="cart-items" class="mb-4">
+        <!-- Items will be added here dynamically -->
+      </div>
+
+      <div class="flex justify-end mt-4 mb-4">
+        <h2 class="text-xl font-bold">
+          Total Price: $<span id="total-price">0.00</span>
+        </h2>
+      </div>
+
+      <!-- Add Item Form -->
+      <div class="mb-4">
+        <h2 class="text-xl font-bold mb-2">Add New Item</h2>
+        <form
+          id="add-item-form"
+          class="flex flex-col md:flex-row md:items-center md:space-x-4 space-y-4 md:space-y-0"
+        >
+          <input
+            type="text"
+            id="item-name"
+            placeholder="Item Name"
+            class="flex-1 p-2 border rounded"
+            required
+          />
+          <input
+            type="number"
+            id="item-price"
+            placeholder="Price"
+            class="flex-1 p-2 border rounded"
+            required
+          />
+          <input
+            type="number"
+            id="item-quantity"
+            placeholder="Quantity"
+            class="flex-1 p-2 border rounded"
+            required
+          />
+          <button type="submit" class="p-2 bg-blue-500 text-white rounded">
+            Add Item
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
